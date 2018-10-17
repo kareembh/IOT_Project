@@ -1,6 +1,6 @@
-from sense_hat import senseHat
+from sense_hat import SenseHat
 
-sense = senseHat()
+sense = SenseHat()
 sense.clear()
 
 p = sense.get_pressure()

@@ -15,4 +15,4 @@ blue = (0,0,255)
 
 message = "Temperature: " + str(t) + " Pressure: " + str(p) + " Humidity: " + str(h)
 
-sense.show_message(message, scroll_speed = 2, text_colour = blue)
+sense.show_message(message, scroll_speed = 0.09, text_colour = blue)

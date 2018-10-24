@@ -29,7 +29,7 @@ def getData():
 
 sense.show_message("Program Starting in 3, 2, 1", scroll_speed = 0.09, text_colour = red)
 
-while true:
+while True:
 	getData()
 
 

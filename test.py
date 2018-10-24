@@ -1,5 +1,5 @@
 from sense_hat import SenseHat
-from firebase import firebase
+##from firebase import firebase
 
 
 sense = SenseHat()

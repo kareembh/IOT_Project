@@ -6,7 +6,7 @@ sense = SenseHat()
 sense.clear()
 ##firebase = firebase.FirebaseApplication("https://raspberrypi-38859.firebaseio.com/",None)
 
-##result = firebase.post({'Temperature': str(t), 'Pressure': str(h), 'Humidity': str(h)})
+##results = firebase.post({'Temperature': str(t), 'Pressure': str(h), 'Humidity': str(h)})
 
 p = sense.get_pressure()
 t = sense.get_temperature()
@@ -25,10 +25,12 @@ def getData():
 	print ("Temperature: " + str(t))
 	print ("Pressure: " + str(p))
 	print ("Humidity: " + str(h))
+	##results
 
-sense.show_message("Program Starting in 3, 2, 1" scroll_speed = 1, text_colour = red)
+sense.show_message("Program Starting in 3, 2, 1", scroll_speed = 1, text_colour = red)
 
 while true:
 	getData()
+
 
 

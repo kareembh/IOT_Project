@@ -1,4 +1,5 @@
 from sense_hat import SenseHat
+from time import sleep
 ##from firebase import firebase
 
 
@@ -22,15 +23,14 @@ red = (255,0,0)
 message = "Temperature: " + str(t) + " Pressure: " + str(p) + " Humidity: " + str(h)
 
 def getData():
-	print ("Temperature: " + str(t))
-	print ("Pressure: " + str(p))
-	print ("Humidity: " + str(h))
+	print ("Temperature: " + str(t) + "Pressure: " + str(p) + "Humidity: " + str(h))
 	##results
 
-sense.show_message("Program Starting in 3, 2, 1", scroll_speed = 0.09, text_colour = red)
+sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)
 
 while True:
 	getData()
+	sleep(5)
 
 
 

@@ -1,6 +1,6 @@
 from sense_hat import SenseHat
 from time import sleep
-##from firebase import firebase
+from firebase import firebase
 
 
 sense = SenseHat()
@@ -12,7 +12,6 @@ sense.clear()
 p = 0.0
 t = 0.0
 h = 0.0
-
 
 blue = (0,0,255)
 red = (255,0,0)
@@ -27,7 +26,7 @@ def getData():
 	p = round(p,1)
 	t = round(t,1)
 	h = round(h,1)
-	print ("Temperature: " + str(t) + "Pressure: " + str(p) + "Humidity: " + str(h))
+	print ("Temperature: " + str(t) + " Pressure: " + str(p) + " Humidity: " + str(h))
 	sense.clear()
 	##results
 

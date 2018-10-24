@@ -9,8 +9,9 @@ sense.clear()
 
 ##results = firebase.post({'Temperature': str(t), 'Pressure': str(h), 'Humidity': str(h)})
 
-
-
+p = 0.0
+t = 0.0
+h = 0.0
 
 
 blue = (0,0,255)
@@ -22,10 +23,12 @@ def getData():
 	p = sense.get_pressure()
 	t = sense.get_temperature()
 	h = sense.get_humidity()
+
 	p = round(p,1)
 	t = round(t,1)
 	h = round(h,1)
 	print ("Temperature: " + str(t) + "Pressure: " + str(p) + "Humidity: " + str(h))
+	sense.clear()
 	##results
 
 sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)

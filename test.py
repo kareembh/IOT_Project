@@ -3,7 +3,7 @@
 from sense_hat import SenseHat
 from time import sleep
 from firebase import firebase
-from flask import flask
+from flask import Flask
 
 ## Declared variables
 

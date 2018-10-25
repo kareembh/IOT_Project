@@ -5,7 +5,7 @@ from firebase import firebase
 
 sense = SenseHat()
 sense.clear()
-firebase = firebase.FirebaseApplication("https://raspberrypi-38859.firebaseio.com/",None)
+firebase = firebase.FirebaseApplication('https://project502-4a209.firebaseio.com/kareem',None)
 
 
 
@@ -28,7 +28,7 @@ def getData():
 	h = round(h,1)
 	print ("Temperature: " + str(t) + " Pressure: " + str(p) + " Humidity: " + str(h))
 	sense.clear()
-	firebase.post '{"Temperature": str(t), "Pressure": str(h), "Humidity": str(h)}'\'https://raspberrypi-38859.firebaseio.com/'
+	firebase.post('/kareem', {'Temperature': str(t)})
 
 sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)
 

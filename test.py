@@ -28,7 +28,7 @@ def getData():
 	h = round(h,1)
 	print ("Temperature: " + str(t) + " Pressure: " + str(p) + " Humidity: " + str(h))
 	sense.clear()
-	firebase.post({'Temperature': str(t), 'Pressure': str(h), 'Humidity': str(h)})
+	firebase.post '{"Temperature": str(t), "Pressure": str(h), "Humidity": str(h)}'\'https://raspberrypi-38859.firebaseio.com/'
 
 sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)
 

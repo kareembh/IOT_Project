@@ -40,6 +40,21 @@ def getData():
 ## Displays program starting message
 sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)
 
+
+#app = Flask(__name__)
+
+#@app.route('/')
+#def index():
+#	now = str(asctime())
+#	currentWeather = now + " "+ " - "+ message + "\n"
+#	weatherData = {
+#		'weather':currentWeather
+#	}
+#	return render_template('index.html', **weatherData)
+
+#if __name__ == '__main__':
+#	app.run(debug = True, host = '0.0.0.0')
+
 ## Program running Sequence
 while True:
 	getData()

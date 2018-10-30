@@ -1,5 +1,4 @@
 ## Imported Modules
-
 from sense_hat import SenseHat
 from time import sleep
 from firebase import firebase

@@ -3,9 +3,6 @@
 from sense_hat import SenseHat
 from time import sleep
 from firebase import firebase
-from flask import Flask
-
-## Declared variables
 
 ##Module variables
 sense = SenseHat()
@@ -13,11 +10,11 @@ sense.clear()
 firebase = firebase.FirebaseApplication('https://project502-4a209.firebaseio.com/kareem',None)
 
 ## Sensor variables
-p = 0.0
-t = 0.0
-h = 0.0
+p = 0.0 ##p for pressure
+t = 0.0 ## t for temperature
+h = 0.0 ## h for humidity
 
-## Colour variables
+## Colour variables in rgb
 blue = (0,0,255)
 red = (255,0,0)
 
@@ -40,25 +37,7 @@ def getData():
 ## Displays program starting message
 sense.show_message("Program Starting in 3 2 1", scroll_speed = 0.09, text_colour = red)
 
-
-#app = Flask(__name__)
-
-#@app.route('/')
-#def index():
-#	now = str(asctime())
-#	currentWeather = now + " "+ " - "+ message + "\n"
-#	weatherData = {
-#		'weather':currentWeather
-#	}
-#	return render_template('index.html', **weatherData)
-
-#if __name__ == '__main__':
-#	app.run(debug = True, host = '0.0.0.0')
-
 ## Program running Sequence
 while True:
 	getData()
 	sleep(10)
-
-
-

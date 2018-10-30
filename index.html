@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Weather Station</title>
-  <style>
-    p {
-      display: inline;
-    }
-    </style>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
-<!--Weeather Data text display-->
-<p>Humidity: </p><p id= "humidity1"></p><br>
-<p>Pressure :</p><p id= "pressure1"></p><br>
-<p>Temperature :</p><p id= "temperature1"></p><br><br>
+<h1>IOT Weather Station</h1>
 
+<!--Weeather Data text display-->
+<div>
+  <p>Date & Time: </p><p id = "date1"></p><br>
+  <p>Humidity: </p><p id= "humidity1"></p><br>
+  <p>Pressure :</p><p id= "pressure1"></p><br>
+  <p>Temperature :</p><p id= "temperature1"></p><br><br>
+</div>
 
 <!--FireBase javascript-->
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
@@ -38,6 +38,7 @@ var d = new Date();
   kareemRef.on("child_added", function(data, prevChildKey) {
      var newData = data.val();
      console.log(d + "/n");
+     document.getElementById("date1").innerHTML = d;
      console.log("Humidity: " + newData.Humidity );
      document.getElementById("humidity1").innerHTML = newData.Humidity;
      console.log("Pressure: " + newData.Pressure);

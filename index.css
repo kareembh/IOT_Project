@@ -1,0 +1,18 @@
+body{
+  background-color: black
+}
+
+h1{
+  color: red;
+  text-align: center;
+}
+
+div{
+  text-align: center;
+}
+
+p {
+  display: inline;
+  color: red;
+  font-size: 25px;
+}
